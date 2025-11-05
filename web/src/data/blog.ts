@@ -1,0 +1,40 @@
+import { BlogPost } from '@/types';
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: 'craft-beer-culture-mumbai',
+    title: 'The Rise of Craft Beer Culture in Mumbai',
+    slug: 'craft-beer-culture-mumbai',
+    excerpt: 'How Mumbai embraced the craft beer revolution and what it means for beer lovers across India.',
+    content: `Mumbai craft beer scene has exploded over the past decade...`,
+    author: 'TJ Brew Team',
+    publishedDate: '2024-10-15',
+    image: '/assets/blog/craft-beer-culture.jpg',
+    category: 'Industry',
+    tags: ['craft beer', 'mumbai', 'culture'],
+  },
+  {
+    id: 'brewing-process-explained',
+    title: 'Our Brewing Process: From Grain to Glass',
+    slug: 'brewing-process-explained',
+    excerpt: 'Take a behind-the-scenes look at how we craft each of our nine signature beers.',
+    content: `Brewing beer is both an art and a science...`,
+    author: 'Master Brewer',
+    publishedDate: '2024-10-01',
+    image: '/assets/blog/brewing-process.jpg',
+    category: 'Brewing',
+    tags: ['brewing', 'process', 'behind-the-scenes'],
+  },
+  {
+    id: 'perfect-beer-food-pairings',
+    title: 'Perfect Beer and Food Pairings for Every Occasion',
+    slug: 'perfect-beer-food-pairings',
+    excerpt: 'Discover which TJ beers pair best with your favorite foods.',
+    content: `Pairing beer with food can elevate both experiences...`,
+    author: 'Chef Team',
+    publishedDate: '2024-09-20',
+    image: '/assets/blog/food-pairing.jpg',
+    category: 'Food & Drink',
+    tags: ['food pairing', 'guide', 'tips'],
+  },
+];

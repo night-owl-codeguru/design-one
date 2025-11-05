@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: local('DIN Next LT Pro'), local('DINNextLTPro');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: local('DIN Next LT Pro Medium'), local('DINNextLTPro-Medium');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Next LT Pro';
+  src: local('DIN Next LT Pro Bold'), local('DINNextLTPro-Bold');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Brutalist Neomorphism Custom Styles */
+@layer utilities {
+  .brutal-border {
+    @apply border-4 border-dark-roast;
+  }
+  
+  .brutal-card {
+    @apply brutal-border shadow-brutal bg-soft-wheat transition-all duration-300;
+  }
+  
+  .brutal-card:hover {
+    @apply shadow-brutal-lg translate-x-1 translate-y-1;
+  }
+  
+  .morph-card {
+    @apply rounded-3xl shadow-morph bg-gradient-to-br from-soft-wheat to-brutal-tan;
+  }
+  
+  .brutal-text-shadow {
+    text-shadow: 4px 4px 0px rgba(200, 105, 40, 0.5);
+  }
+  
+  .brutal-outline {
+    -webkit-text-stroke: 2px #2D1B12;
+    paint-order: stroke fill;
+  }
+}
+
+/* Base Styles */
+@layer base {
+  :root {
+    --font-din: 'DIN Next LT Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* Account for fixed floating navbar */
+  }
+  
+  body {
+    @apply bg-soft-wheat text-dark-roast font-din;
+    padding-top: 100px; /* Space for floating navbar */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-brutal-wide;
+  }
+}
+
+/* Custom animations */
+@keyframes brutal-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 8px 8px 0px rgba(200, 105, 40, 0.8);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 12px 12px 0px rgba(200, 105, 40, 0.8);
+  }
+}
+
+.brutal-pulse-animate {
+  animation: brutal-pulse 2s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-soft-wheat;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-burnt-copper rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-golden-pour;
+}
