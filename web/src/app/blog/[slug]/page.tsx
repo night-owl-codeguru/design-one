@@ -9,6 +9,12 @@ type BlogPostPageProps = {
   params?: Promise<{ slug?: string | string[] }>;
 };
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Next.js 15 passes route params as a Promise; await to normalise before use.
   const resolvedParams = params ? await params : {};

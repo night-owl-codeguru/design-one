@@ -8,6 +8,12 @@ import Link from 'next/link';
 import { ArrowLeft, ShoppingCart, Check } from 'lucide-react';
 import { useState } from 'react';
 
+export async function generateStaticParams() {
+  return beersData.map((beer) => ({
+    id: beer.id,
+  }));
+}
+
 export default function BeerDetailPage() {
   const params = useParams();
   const beerId = params.id as string;
